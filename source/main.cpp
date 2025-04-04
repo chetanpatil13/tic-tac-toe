@@ -9,7 +9,7 @@ int main()
     system("cls");
     game.drawBoard();
 
-    while (game.getChoice() == GAME_CONTINUE)
+    while (game.getChoice() == GameChoice::GAME_CONTINUE)
     {
         game.playerMove();
         system("cls");

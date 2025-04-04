@@ -29,13 +29,16 @@ void TicTacToe::gameChoice(void)
 {
     cout << "0. Exit" << endl;
     cout << "1. Reset" << endl;
-    cin >> choice;
-
-    if(choice == GAME_EXIT){
+    int userChoice;
+    cout << "Enter your choice: ";
+    cin >> userChoice;
+    choice = static_cast<GameChoice>( userChoice );
+    
+    if(choice == GameChoice::GAME_EXIT){
         cout << "Thanks for playing!" << endl << endl;
         exit(0);
     }
-    else if(choice == GAME_CONTINUE){
+    else if(choice == GameChoice::GAME_CONTINUE){
         resetBoard();
         system("cls");
         setPlayer(PLAYER1);
