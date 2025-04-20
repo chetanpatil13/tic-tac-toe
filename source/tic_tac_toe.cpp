@@ -4,7 +4,7 @@
 using namespace std;
 
 int TicTacToe::moveCount{ MIN_MOVE_COUNT };
-bool TicTacToe::choice{ GAME_CONTINUE };
+GameChoice TicTacToe::choice{ GameChoice::GAME_CONTINUE };
 
 void TicTacToe::drawBoard()
 {
